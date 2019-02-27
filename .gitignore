@@ -14,3 +14,6 @@ manage-server/target/
 
 /dataSources/
 /.ideaDataSources/
+SpringCloud.ipr
+SpringCloud.iws
+util-server/src/main/resources/
