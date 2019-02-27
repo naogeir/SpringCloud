@@ -4,9 +4,6 @@
 
 #系统配置文件
 /.idea/*
-/com.spring.cloud.iws
-/com.spring.cloud.ipr
-
 
 config-server/target/
 eureka-server/target/
