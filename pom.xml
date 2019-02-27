@@ -15,6 +15,7 @@
         <module>config-server</module>
         <module>zuul-server</module>
         <module>manage-server</module>
+        <module>monitor-server</module>
     </modules>
 
     <properties>

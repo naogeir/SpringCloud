@@ -1,20 +1,23 @@
 #---------------------------------------------------------------------
 spring:
   profiles:
-    active: stg
+    active: dev
 #---------------------------------------------------------------------
 server:
-  port: 9090
-  servlet:
-    context-path: /zuul-server
+  port: 9000
 #---------------------------------------------------------------------
 eureka:
   instance:
-    prefer-ip-address: true
+    hostname: localhost
+    leaseRenewalIntervalInSeconds: 10
     status-page-url-path: /actuator/info #eureka注册中心的url link
     health-check-url-path: /actuator/health #健康检查的url
-    hostname: localhost
-    status-page-url: http://localhost:${server.port}${server.servlet.context-path}/swagger-ui.html
+  client:
+    register-with-eureka: false #是否注册到注册中心
+    fetch-registry: false #是否从注册中心拉取注册服务列表
+    registryFetchIntervalSeconds: 5
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 #---------------------------------------------------------------------
 info:
   version: 1.0.0
