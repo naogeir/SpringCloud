@@ -23,15 +23,6 @@ eureka:
       user.name: ${spring.security.user.name}
       user.password: ${spring.security.user.password}
     status-page-url: http://localhost:${server.port}/#/wallboard
-#---------------------------------------------------------------------
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS
   #---------------------------------------------------------------------
 info:
   version: 1.0.0

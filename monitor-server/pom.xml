@@ -22,6 +22,7 @@
         <springcloud.version>Finchley.RELEASE</springcloud.version>
         <java.version>1.8</java.version>
         <tomcat.version>8.5.9</tomcat.version>
+        <druid.version>2.0.1</druid.version>
     </properties>
 
     <dependencyManagement>
@@ -47,10 +48,15 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
+        <!--配置组件，用于获取远程配置信息-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-starter-server</artifactId>
-            <version>2.0.1</version>
+            <version>${druid.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -8,10 +8,10 @@ eureka:
 #---------------------------------------------------------------------
 spring:
   application:
-    name: manage-server
+    name: monitor-server
   cloud:
     config:
-      name: manage-server,db-config,druid-config
+      name: monitor-server,druid-config
       failFast: true
       discovery:
         enabled: true

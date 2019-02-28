@@ -1,4 +1,4 @@
-package com.micro.system.manage.config.durid;
+package com.micro.system.manage.config.monitor;
 
 
 import com.alibaba.druid.support.http.StatViewServlet;
@@ -26,10 +26,7 @@ public class DruidMonitorConfig {
         initParams.put("allow", "");
         initParams.put("resetEnable", "true");
 //        initParams.put("deny","192.168.15.21");  //黑名单
-
         bean.setInitParameters(initParams);
-
-        logger.info("我现在正在被执行....");
 
         return bean;
     }
@@ -41,8 +38,6 @@ public class DruidMonitorConfig {
         filterRegistrationBean.addUrlPatterns("/*");
         //添加不需要忽略的格式信息.
         filterRegistrationBean.addInitParameter("exclusions", "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*");
-
-        logger.info("我在被执行....");
 
         return filterRegistrationBean;
     }

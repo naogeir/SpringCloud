@@ -8,21 +8,28 @@
 #org.mariadb.jdbc.Driver
 #jdbc:mariadb://localhost:3306/data_base
 
+#配置数据库连接url用户密码
 db:
-  info:
+  master:
+    driverClassName: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/data_base
+    username: root
+    password: 111111qwe
+  slave:
     driverClassName: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://localhost:3306/data_base
     username: root
     password: 111111qwe
 
+#################DRUID数据配置########################
 druid:
   type: com.alibaba.druid.pool.DruidDataSource
-
+  #写库配置
   master:
-    driverClassName: ${db.info.driverClassName}
-    url: ${db.info.url}
-    username: ${db.info.username}
-    password: ${db.info.password}
+    driverClassName: ${db.master.driverClassName}
+    url: ${db.master.url}
+    username: ${db.master.username}
+    password: ${db.master.password}
     initialSize: 5
     minIdle: 1
     maxActive: 100
@@ -38,12 +45,12 @@ druid:
     useGlobalDataSourceStat: true
     filters: stat,wall
     logSlowSql: true
-
+  #读库配置
   slave:
-    driverClassName: ${db.info.driverClassName}
-    url: ${db.info.url}
-    username: ${db.info.username}
-    password: ${db.info.password}
+    driverClassName: ${db.slave.driverClassName}
+    url: ${db.slave.url}
+    username: ${db.slave.username}
+    password: ${db.slave.password}
     initialSize: 5
     minIdle: 1
     maxActive: 100
@@ -59,3 +66,4 @@ druid:
     useGlobalDataSourceStat: true
     filters: stat,wall
     logSlowSql: true
+#################DRUID数据配置########################
