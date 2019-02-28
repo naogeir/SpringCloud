@@ -1,6 +1,7 @@
 package com.micro.system.zuul.service.impl;
 
 import com.micro.system.util.AesUtil;
+import com.micro.system.util.CommonException;
 import com.micro.system.util.ReturnJson;
 import com.micro.system.util.SystemConstant;
 import com.micro.system.zuul.feign.ManagerClient;
@@ -35,14 +36,14 @@ public class LoginServiceImpl implements LoginService {
      */
     private UserInfoJson getEmployeeInfo(LoginForm loginForm) {
         UserInfoForm userInfoForm = new UserInfoForm();
-        UserInfoJson userInfoJson = new UserInfoJson();
         userInfoForm.setUserName(loginForm.getUserAccount());
         String password = AesUtil.encrypt(loginForm.getUserPwd(), SystemConstant.SECRET_KEY);
         userInfoForm.setCipherPassWord(password);
         ReturnJson<UserInfoJson> returnJson = managerClient.queryEmployeeInfo(userInfoForm);
         if (returnJson.isSuccess()) {
-            userInfoJson = returnJson.getData();
+            UserInfoJson userInfoJson = returnJson.getData();
+            return returnJson.getData();
         }
-        return userInfoJson;
+        throw new CommonException(returnJson.getResultCode(), returnJson.getResultMessage());
     }
 }

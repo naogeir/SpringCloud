@@ -32,9 +32,7 @@ public class DataSourceConfig {
     @ConfigurationProperties(prefix = "druid.master")
     public DataSource masterDataSource() {
         DataSource masterDataSource = DataSourceBuilder.create().type(dataSourceType).build();
-        logger.info("-----------------主库数据信息-------------------");
-        logger.info("{}", masterDataSource.toString());
-        logger.info("-----------------主库数据信息-------------------");
+        logger.info("-----------------主库信息已载入-------------------");
         return masterDataSource;
     }
 
@@ -42,9 +40,7 @@ public class DataSourceConfig {
     @ConfigurationProperties(prefix = "druid.slave")
     public DataSource slaveDataSource() {
         DataSource slaveDataSource = DataSourceBuilder.create().type(dataSourceType).build();
-        logger.info("-----------------从库数据信息-------------------");
-        logger.info("{}", slaveDataSource.toString());
-        logger.info("-----------------从库数据信息-------------------");
+        logger.info("-----------------从库信息已载入-------------------");
         return slaveDataSource;
     }
 }

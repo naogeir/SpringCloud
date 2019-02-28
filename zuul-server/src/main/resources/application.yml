@@ -1,20 +1,13 @@
-#---------------------------------------------------------------------
-spring:
-  profiles:
-    active: dev
-#---------------------------------------------------------------------
 server:
   port: 9090
-  servlet:
-    context-path: /zuul-server
 #---------------------------------------------------------------------
 eureka:
   instance:
-    prefer-ip-address: true
+    leaseRenewalIntervalInSeconds: 10
     status-page-url-path: /actuator/info #eureka注册中心的url link
     health-check-url-path: /actuator/health #健康检查的url
     hostname: localhost
-    status-page-url: http://localhost:${server.port}${server.servlet.context-path}/swagger-ui.html
+    status-page-url: http://localhost:${server.port}/swagger-ui.html
 #---------------------------------------------------------------------
 info:
   version: 1.0.0

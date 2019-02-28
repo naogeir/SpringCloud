@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.1.RELEASE</version>
+        <version>2.1.3.RELEASE</version>
     </parent>
 
     <properties>
@@ -20,11 +20,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <tomcat.version>8.5.9</tomcat.version>
-        <swagger.version>2.7.0</swagger.version>
-        <springcloud.version>Finchley.RELEASE</springcloud.version>
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <swagger.version>2.8.0</swagger.version>
+        <feign.version>1.4.6.RELEASE</feign.version>
     </properties>
-
 
     <dependencyManagement>
         <dependencies>
@@ -32,7 +31,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${springcloud.version}</version>
+                <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -55,6 +54,12 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-zuul</artifactId>
         </dependency>
+        <!--通过feign调用其他微服务-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>${feign.version}</version>
+        </dependency>
         <!--引入swagger，方便测试测试代码-->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -66,14 +71,6 @@
             <artifactId>springfox-swagger-ui</artifactId>
             <version>${swagger.version}</version>
         </dependency>
-        <!--引入swagger，方便测试测试代码-->
-        <!--通过feign调用其他微服务-->
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        <!--通过feign调用其他微服务-->
         <!--Tools Start-->
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -91,7 +88,6 @@
             <version>1.0</version>
             <scope>compile</scope>
         </dependency>
-        <!--Tools End-->
     </dependencies>
 
 

@@ -11,7 +11,7 @@ spring:
     name: monitor-server
   cloud:
     config:
-      name: monitor-server,druid-config
+      name: monitor-server
       failFast: true
       discovery:
         enabled: true

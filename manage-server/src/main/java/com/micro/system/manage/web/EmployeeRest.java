@@ -1,16 +1,19 @@
 package com.micro.system.manage.web;
 
 import com.github.pagehelper.PageInfo;
+import com.micro.system.manage.constant.ManageConstant;
 import com.micro.system.manage.model.form.user.AddUserForm;
 import com.micro.system.manage.model.form.user.UserInfoForm;
 import com.micro.system.manage.model.json.UserInfoJson;
 import com.micro.system.manage.service.EmployeeService;
+import com.micro.system.util.CommonException;
 import com.micro.system.util.ReturnJson;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -50,6 +53,9 @@ public class EmployeeRest {
     @ApiOperation(value = "查询用户信息", notes = "通过入参筛选符合要求的用户信息，返回结果", response = UserInfoJson.class)
     public ReturnJson queryUserInfoPri(@RequestBody UserInfoForm userInfoForm) {
         List<UserInfoJson> userInfo = employeeService.queryUserInfo(userInfoForm);
+        if (CollectionUtils.isEmpty(userInfo)) {
+            throw new CommonException(ManageConstant.RESULT_NULL);
+        }
         return ReturnJson.success(userInfo);
     }
 
