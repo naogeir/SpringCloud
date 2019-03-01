@@ -1,16 +1,9 @@
 #例外文件
 *.iml
+*.ipr
+*.iws
 */src/test/
 
 #系统配置文件
-/.idea/*
-
-config-server/target/
-eureka-server/target/
-manage-server/target/
-
-/dataSources/
+*/target/
 /.ideaDataSources/
-SpringCloud.ipr
-SpringCloud.iws
-util-server/src/main/resources/

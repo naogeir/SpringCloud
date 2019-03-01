@@ -1,0 +1,28 @@
+#---------------------------------------------------------------------
+server:
+  port: 10030
+#---------------------------------------------------------------------
+spring:
+  application:
+    name: monitor-server
+  security:
+    user:
+      name: 'admin'
+      password: 'admin'
+#---------------------------------------------------------------------
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    status-page-url-path: /actuator/info #eureka注册中心的url link
+    health-check-url-path: /actuator/health #健康检查的url
+    hostname: localhost
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
+    status-page-url: http://localhost:${server.port}/#/wallboard
+  #---------------------------------------------------------------------
+info:
+  version: 1.0.0
+  app:
+    name: ${spring.application.name}
+#---------------------------------------------------------------------
