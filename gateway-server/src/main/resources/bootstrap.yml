@@ -8,10 +8,10 @@ eureka:
 #---------------------------------------------------------------------
 spring:
   application:
-    name: manage-server
+    name: gateway-server
   cloud:
     config:
-      name: manage-server,db-config,druid-config
+      name: gateway-server,hystrix-config
       failFast: true
       discovery:
         enabled: true

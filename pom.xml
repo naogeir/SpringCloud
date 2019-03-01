@@ -13,9 +13,9 @@
         <module>util-server</module>
         <module>eureka-server</module>
         <module>config-server</module>
-        <module>zuul-server</module>
         <module>manage-server</module>
         <module>monitor-server</module>
+        <module>gateway-server</module>
     </modules>
 
     <properties>

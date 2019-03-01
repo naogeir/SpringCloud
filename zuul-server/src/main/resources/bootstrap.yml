@@ -11,7 +11,7 @@ spring:
     name: zuul-server
   cloud:
     config:
-      name: zuul-server,hystrix-config
+      name: zuul-server
       failFast: true
       discovery:
         enabled: true
