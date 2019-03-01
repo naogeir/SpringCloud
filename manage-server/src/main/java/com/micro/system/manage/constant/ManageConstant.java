@@ -11,7 +11,9 @@ import java.io.Serializable;
  * Package: com.micro.system.manage.constant
  */
 public class ManageConstant implements Serializable {
-    //  错误码
+    /**
+     * 错误码
+     */
     public static final ResponseCode RESULT_NULL = new ResponseCode("Me1000001", "查询无数据");
 
 }

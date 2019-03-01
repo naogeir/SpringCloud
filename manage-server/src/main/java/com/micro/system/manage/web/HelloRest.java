@@ -7,6 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author Noageir
+ * Date:2018-05-06 22:20
+ * Project:com.spring.cloud
+ * Package:com.micro.system.eureka
+ */
 @RestController
 @RequestMapping("/manage_hello")
 @Api(description = "测试类")

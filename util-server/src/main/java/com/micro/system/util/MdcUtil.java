@@ -4,7 +4,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
 
-public class MDCUtil {
+/**
+ * @author Noageir
+ * Date:2018-05-06 22:20
+ * Project:com.spring.cloud
+ * Package:com.micro.system.eureka
+ */
+public class MdcUtil {
     /**
      * 角色
      */
@@ -17,7 +23,7 @@ public class MDCUtil {
      * 请求事物ID
      */
     public static final String MDC_TRANSACTION_ID = "transactionId";
-    private static final Logger logger = LoggerFactory.getLogger(MDCUtil.class);
+    private static final Logger logger = LoggerFactory.getLogger(MdcUtil.class);
 
     /**
      * 获取请求用的角色

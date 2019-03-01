@@ -11,7 +11,10 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 /**
- *
+ * @author Noageir
+ * Date:2018-05-06 22:20
+ * Project:com.spring.cloud
+ * Package:com.micro.system.eureka
  */
 public class DateUtil {
     public static final String FORMAT_1 = "yyyyMMddHHmmss";

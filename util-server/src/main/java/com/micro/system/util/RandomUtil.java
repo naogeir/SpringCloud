@@ -4,6 +4,12 @@ import java.security.SecureRandom;
 import java.util.Random;
 import java.util.UUID;
 
+/**
+ * @author Noageir
+ * Date:2018-05-06 22:20
+ * Project:com.spring.cloud
+ * Package:com.micro.system.eureka
+ */
 public class RandomUtil {
     public static final String AGENT = "A";
     public static final String SYSTEM = "S";
