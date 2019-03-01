@@ -11,17 +11,11 @@
 
     <modules>
         <module>util-server</module>
-        <module>eureka-server</module>
-        <module>config-server</module>
-        <module>manage-server</module>
-        <module>monitor-server</module>
-        <module>gateway-server</module>
+        <module>03_eureka-server</module>
+        <module>04_config-server</module>
+        <module>05_monitor-server</module>
+        <module>06_gateway-server</module>
+        <module>07_manage-server</module>
     </modules>
 
-    <properties>
-        <!--整个项目统一字符集编码-->
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.version>1.8</java.version>
-    </properties>
 </project>
