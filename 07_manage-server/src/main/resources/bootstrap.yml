@@ -11,7 +11,7 @@ spring:
     name: manage-server
   cloud:
     config:
-      name: manage-server,db-config,druid-config,monitor-config
+      name: manage-server,db-config,druid-config,monitor-config,hystrix-config
       failFast: true
       discovery:
         enabled: true

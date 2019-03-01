@@ -3,8 +3,7 @@ package com.micro.system.monitor;
 
 import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.client.SpringCloudApplication;
 
 
 /**
@@ -13,8 +12,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * Project:com.spring.cloud
  * Package:com.micro.system.eureka
  */
-@SpringBootApplication
-@EnableEurekaClient
+@SpringCloudApplication
 @EnableAdminServer
 public class MonitorApplication {
     public static void main(String[] args) {

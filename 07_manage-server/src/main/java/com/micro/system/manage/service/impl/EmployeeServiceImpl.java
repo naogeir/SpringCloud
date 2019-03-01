@@ -26,12 +26,8 @@ import java.util.List;
 public class EmployeeServiceImpl implements EmployeeService {
     private static Logger logger = LoggerFactory.getLogger(EmployeeServiceImpl.class);
 
-    private final EmployeeMapper employeeMapper;
-
     @Autowired
-    public EmployeeServiceImpl(EmployeeMapper employeeMapper) {
-        this.employeeMapper = employeeMapper;
-    }
+    private EmployeeMapper employeeMapper;
 
     @Override
     @WriteOnlyConnection

@@ -10,10 +10,6 @@ eureka:
     hostname: localhost
     status-page-url: http://localhost:${server.port}/swagger-ui.html
 #---------------------------------------------------------------------
-mybatis:
-  config-location: classpath:mybatis-config.xml
-  mapper-locations: classpath:mapper/*Mapper.xml
-#---------------------------------------------------------------------
 info:
   version: 1.0.0
   app:

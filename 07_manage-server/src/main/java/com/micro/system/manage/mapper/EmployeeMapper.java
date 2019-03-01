@@ -3,7 +3,6 @@ package com.micro.system.manage.mapper;
 import com.micro.system.manage.model.form.user.AddUserForm;
 import com.micro.system.manage.model.form.user.UserInfoForm;
 import com.micro.system.manage.model.json.UserInfoJson;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -13,7 +12,6 @@ import java.util.List;
  * Project:com.spring.cloud
  * Package:com.micro.system.manage.mapper
  */
-@Mapper
 public interface EmployeeMapper {
     /**
      * 查询用户信息

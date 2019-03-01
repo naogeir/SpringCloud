@@ -34,12 +34,8 @@ import java.util.List;
 public class EmployeeRest {
     private static final Logger logger = LoggerFactory.getLogger(EmployeeRest.class);
 
-    private final EmployeeService employeeService;
-
     @Autowired
-    public EmployeeRest(EmployeeService employeeService) {
-        this.employeeService = employeeService;
-    }
+    private EmployeeService employeeService;
 
     @PostMapping("/query_user_info")
     @ApiOperation(value = "查询用户信息", notes = "通过入参筛选符合要求的用户信息，返回结果", response = UserInfoJson.class)
