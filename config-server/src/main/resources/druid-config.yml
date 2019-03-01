@@ -10,15 +10,3 @@ spring:
         login-password: admin
         allow: 127.0.0.1
         #deny= 192.168.32.139 #访问黑名单
-
-
-
-#监控配置
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS

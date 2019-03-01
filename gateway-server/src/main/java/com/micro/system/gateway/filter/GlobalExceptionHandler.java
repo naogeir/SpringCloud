@@ -1,4 +1,4 @@
-package com.micro.system.zuul.filter;
+package com.micro.system.gateway.filter;
 
 import com.micro.system.util.CommonException;
 import com.micro.system.util.ErrorPoint;
@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+
 
 @ControllerAdvice
 @ResponseBody
