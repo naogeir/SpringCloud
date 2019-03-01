@@ -2,14 +2,6 @@
 server:
   port: 10030
 #---------------------------------------------------------------------
-spring:
-  application:
-    name: monitor-server
-  security:
-    user:
-      name: 'admin'
-      password: 'admin'
-#---------------------------------------------------------------------
 eureka:
   instance:
     leaseRenewalIntervalInSeconds: 10

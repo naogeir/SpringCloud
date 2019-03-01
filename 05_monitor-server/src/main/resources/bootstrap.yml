@@ -9,6 +9,10 @@ eureka:
 spring:
   application:
     name: monitor-server
+  security:
+    user:
+      name: 'admin'
+      password: 'admin'
   cloud:
     config:
       name: monitor-server,monitor-config,hystrix-config
