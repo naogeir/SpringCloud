@@ -1,7 +1,7 @@
 package com.micro.system.gateway;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 /**
@@ -10,7 +10,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
  * Project:com.spring.cloud
  * Package:com.micro.system.eureka
  */
-@SpringBootApplication
+@SpringCloudApplication
 @EnableDiscoveryClient
 public class GatewayApplication {
     public static void main(String[] args) {
