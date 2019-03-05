@@ -8,7 +8,7 @@ eureka:
     status-page-url-path: /actuator/info #eureka注册中心的url link
     health-check-url-path: /actuator/health #健康检查的url
     hostname: localhost
-    status-page-url: http://localhost:${server.port}/swagger-ui.html
+    status-page-url: http://localhost:${server.port}/actuator/info
 #---------------------------------------------------------------------
 info:
   version: 1.0.0
