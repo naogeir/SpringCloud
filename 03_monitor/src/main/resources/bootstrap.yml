@@ -1,4 +1,13 @@
 eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    status-page-url-path: /actuator/info #eureka注册中心的url link
+    health-check-url-path: /actuator/health #健康检查的url
+    hostname: localhost
+    metadata-map:
+      user.name: ${spring.security.user.name}
+      user.password: ${spring.security.user.password}
+    status-page-url: http://localhost:${server.port}/#/wallboard
   client:
     registryFetchIntervalSeconds: 5
     register-with-eureka: true #是否注册到注册中心
@@ -14,6 +23,16 @@ spring:
       name: 'admin'
       password: 'admin'
   cloud:
+    #    consul:
+    #      host: 192.168.1.80
+    #      port: 8500
+    #      discovery:
+    #        enabled: true
+    #        register: true
+    #        healthCheckInterval: 5s
+    #        health-check-timeout: 1s
+    #        prefer-ip-address: true
+    #        health-check-path: /actuator/health
     config:
       name: monitor-server,monitor-config,hystrix-config
       failFast: true
