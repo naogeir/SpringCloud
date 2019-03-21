@@ -22,7 +22,6 @@ public class SecuritySecureConfig extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        // @formatter:off
         SavedRequestAwareAuthenticationSuccessHandler successHandler = new SavedRequestAwareAuthenticationSuccessHandler();
         successHandler.setTargetUrlParameter("redirectTo");
 
@@ -35,6 +34,5 @@ public class SecuritySecureConfig extends WebSecurityConfigurerAdapter {
                 .logout().logoutUrl(adminContextPath + "/logout").and()
                 .httpBasic().and()
                 .csrf().disable();
-        // @formatter:on
     }
 }

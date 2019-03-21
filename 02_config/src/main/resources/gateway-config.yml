@@ -1,3 +1,11 @@
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+
 spring:
   cloud:
     gateway:

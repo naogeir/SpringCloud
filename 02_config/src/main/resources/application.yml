@@ -6,17 +6,6 @@ spring:
     active: native
   application:
     name: config-server
-#  cloud:
-#    consul:
-#      host: 192.168.1.80
-#      port: 8500
-#      discovery:
-#        enabled: true
-#        register: true
-#        healthCheckInterval: 5s
-#        health-check-timeout: 1s
-#        prefer-ip-address: true
-#        health-check-path: /actuator/health
 #---------------------------------------------------------------------
 eureka:
   instance:

@@ -16,18 +16,8 @@ spring:
   application:
     name: employee-server
   cloud:
-    #    consul:
-    #      host: 192.168.1.80
-    #      port: 8500
-    #      discovery:
-    #        enabled: true
-    #        register: true
-    #        healthCheckInterval: 5s
-    #        health-check-timeout: 1s
-    #        prefer-ip-address: true
-    #        health-check-path: /actuator/health
     config:
-      name: employee-server,db-config,druid-config,monitor-config,hystrix-config
+      name: employee-server,hystrix-config,db-config,druid-config,monitor-config
       failFast: true
       discovery:
         enabled: true
