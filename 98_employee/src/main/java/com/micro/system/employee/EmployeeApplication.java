@@ -8,7 +8,7 @@ import org.springframework.cloud.client.SpringCloudApplication;
  * @author Noageir
  * Date:2018-05-11 22:02
  * Project:com.spring.cloud
- * Package:com.micro.system.employee.web
+ * Package:com.micro.system.employee
  */
 @SpringCloudApplication
 @MapperScan(value = "com.micro.system.employee.mapper")
