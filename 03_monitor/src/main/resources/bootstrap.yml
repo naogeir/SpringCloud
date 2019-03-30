@@ -17,14 +17,14 @@ eureka:
 #---------------------------------------------------------------------
 spring:
   application:
-    name: monitor-server
+    name: oauth-server
   security:
     user:
       name: 'admin'
       password: 'admin'
   cloud:
     config:
-      name: monitor-server,monitor-config
+      name: oauth-server,oauth-config
       failFast: true
       discovery:
         enabled: true
