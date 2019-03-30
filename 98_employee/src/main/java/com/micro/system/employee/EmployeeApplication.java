@@ -3,6 +3,7 @@ package com.micro.system.employee;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * @author Noageir
@@ -11,6 +12,7 @@ import org.springframework.cloud.client.SpringCloudApplication;
  * Package:com.micro.system.employee
  */
 @SpringCloudApplication
+@EnableFeignClients
 @MapperScan(value = "com.micro.system.employee.mapper")
 public class EmployeeApplication {
     public static void main(String[] args) {

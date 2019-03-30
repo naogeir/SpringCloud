@@ -22,9 +22,9 @@ spring:
           filters:
             - StripPrefix=1
         #配置跳转监控的微服务
-        - id: oauth-server
-          uri: lb://oauth-server
+        - id: monitor-server
+          uri: lb://monitor-server
           predicates:
-            - Path=/oauth/**
+            - Path=/monitor/**
           filters:
             - StripPrefix=1
